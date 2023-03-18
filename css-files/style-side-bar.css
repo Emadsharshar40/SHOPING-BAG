@@ -1,0 +1,309 @@
+/*start article grid*/
+.main-article .container {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    grid-template-rows: repeat(450px) repeat(1fr);
+    gap: 10px;
+}
+.main-article {
+    margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+    .main-article .container .sideBar {
+        display: none;
+    }
+    .main-article .container {
+        grid-template-columns: none;
+    }
+    .main-article .container .landing {
+        height: 100vh;
+    }
+}
+.main-article .container .sideBar,
+.main-article .container .information,
+.main-article .container .landing,
+.main-article .container .shoping {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: -6px 4px 7px #8d8d8d;
+}
+.main-article .container .sideBar li {
+    height: calc(490px / 10);
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: var(--main-transition);
+}
+.main-article .container .sideBar li:hover {
+    background: var(--color2);
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+}
+.main-article .container .sideBar li:not(:first-of-type) {
+    border-top: 1px solid #EEE;
+    position: relative;
+}
+.main-article .container .sideBar li:not(:first-of-type)::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-left-color: black;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.main-article .container .sideBar li i {
+    font-size: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.bg-color2 {
+    background: var(--color2);
+}
+.main-article .container .sideBar li a {
+    color: black;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.main-article .container .landing {
+    background: url('../images/landing.jpg');
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.main-article .container .landing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(0 0 0 / 40%);
+}
+.main-article .container .landing .text-lan {
+    position: absolute;
+    left: 100px;
+}
+.main-article .container .landing .text-lan h3 {
+    color: var(--color2);
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.main-article .container .landing .text-lan h2 {
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 15px 0;
+}
+.main-article .container .landing .text-lan p {
+    color: #fff9;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+.main-article .container .landing .text-lan a {
+    display: block;
+    color: black;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    background: var(--color2);
+    padding: 10px 25px;
+    transition: var(--main-transition);
+}
+.main-article .container .landing .text-lan a:hover {
+    transform: scale(1.1,1.1);
+}
+.main-article .container .information .head-info,
+.main-article .container .shoping .head-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 1px solid #DDD;
+}
+.main-article .container .information,
+.main-article .container .sideBar {
+    height: fit-content;
+}
+.main-article .container .information .head-info .text h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: -.5px;
+}
+.main-article .container .information .head-info .icons i {
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 5px;
+    border: 1px solid #DDD;
+    background: var(--color2);
+    cursor: pointer;
+}
+.main-article .container .information .img {
+    height: 220px;
+    text-align: center;
+    border-bottom: 1px solid #DDD;
+}
+.main-article .container .information .img img {
+    height: inherit;
+    max-width: 100%;
+}
+.main-article .container .information .detales > div {
+    padding: 10px;
+}
+.main-article .container .information .detales .title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.main-article .container .information .detales .stars-icons i {
+    font-size: 1.5rem;
+}
+.colorStar {
+    color: #ffb000;
+}
+.main-article .container .information .detales .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.main-article .container .information .detales .price .rell-price {
+    color: red;
+}
+.main-article .container .information .detales .price .descount {
+    color: #555;
+    text-decoration: line-through;
+}
+.main-article .container .shoping .head-info .text h3 {
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+.main-article .container .shoping .head-info .icons i {
+    display: inline-block;
+    padding: 5px;
+    background: dodgerblue;
+    color: white;
+    font-size: 1.6rem;
+}
+.main-article .shoping .catogrys {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 10px;
+}
+.main-article .shoping .catogrys .img {
+    text-align: center;
+    height: 220px;
+    border-bottom: 1px solid #DDD;
+}
+.main-article .shoping .catogrys .card {
+    border-right: 1px solid #DDD;
+}
+.main-article .shoping .catogrys .img img {
+    width: 90%;
+    max-width: 100%;
+    height: 100%;
+    transition: .2s;
+}
+.main-article .shoping .catogrys .card .detales {
+    padding: 14px;
+}
+.main-article .shoping .catogrys .card .detales .title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 10px 0;
+    color: var(--headColor);
+}
+.main-article .shoping .catogrys .card .detales .stars-icons i {
+    font-size: 1.2rem;
+    margin: 10px 0 20px;
+}
+.main-article .shoping .catogrys .card .detales .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.main-article .shoping .catogrys .card .detales .price .rell-price {
+    color: red;
+}
+.main-article .shoping .catogrys .card .detales .price .descount {
+    color: #555;
+    text-decoration: line-through;
+}
+.main-article .shoping {
+    overflow: visible !important;
+}
+.main-article .shoping .catogrys .card {
+    transition: .2s;
+    background: white;
+    border-radius: 8px;
+}
+.main-article .shoping .catogrys .card:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #CCC;
+}
+.main-article .shoping .catogrys .card:hover img {
+    transform: scale(.9,.9);
+}
+.catch {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.catch div a {
+    color: black;
+    font-weight: bold;
+    display: block;
+    background: var(--color2);
+    padding: 8px 15px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+.catch > a {
+    color: black;
+    font-weight: bold;
+    display: block;
+    font-size: 1.3rem;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+.catch > a i {
+    
+}
+/*End article grid*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,127 @@
+/*start style footer*/
+.footer-page {
+   background: #191919;
+   padding-top: 70px;
+}
+.footer-page .container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+   gap: 40px;
+}
+.footer-page .box h3 {
+   color: #FFF;
+   font-size: 40px;
+   margin-bottom: 20px;
+}
+.footer-page .box .social {
+   display: flex;
+}
+.footer-page .box .social li {
+   margin-right: 14px;
+}
+.footer-page .box .social li a {
+   background-color: #313131;
+   color: #989898;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 50px;
+   height: 50px;
+   font-size: 23px;
+   transition: var(--main-transition);
+}
+.footer-page .box .social a.facebook:hover {
+   background: #1877f2;
+}
+.footer-page .box .social a.twitter:hover {
+   background: #1da1f2;
+}
+.footer-page .box .social a.youtube:hover {
+   background: #ff0000;
+}
+.footer-page .box .text {
+   line-height: 2;
+   color: #b9b9b9;
+   margin-top: 17px;
+   font-size: 1.5rem;
+}
+.footer-page .box .links li {
+   padding: 29px 0;
+   transition: var(--main-transition);
+}
+.footer-page .box .links li:not(:last-child) {
+   border-bottom: 1px solid #333;
+}
+.footer-page .box .links li a {
+   transition: var(--main-transition);
+   color: #b9b9b9;
+   font-size: 1.5rem;
+}
+.footer-page .box .links li:hover {
+   padding-left: 13px;
+}
+.footer-page .box .links li:hover a {
+   color: white;
+}
+.footer-page .box .links li a::before {
+   content: "\f101";
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   margin-right: 10px;
+   color: var(--color2);
+}
+.footer-page .box .line {
+   display: flex;
+   align-items: center;
+   color: #b9b9b9;
+   margin-bottom: 40px;
+}
+.footer-page .box .line i {
+   font-size: 25px;
+   margin-right: 10px;
+   color: var(--color2);
+}
+.footer-page .box .line .info {
+   line-height: 2;
+   flex: 1;
+   font-size: 1.5rem;
+}
+.footer-page .box .line .info span {
+   display: block;
+}
+.footer-page .footer-gallery img {
+    width: 78px;
+    height: 78px;
+    border: 3px solid #FFF;
+    margin: 1px;
+}
+.footer-page .cobyright {
+    padding: 25px;
+    background: #111;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.footer-page .cobyright b {
+    color: var(--color2);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+@media (max-width: 767px) {
+   .footer-page {
+      text-align: center;
+   }
+   .footer-page .box .social {
+      justify-content: center;
+   }
+   .footer-page .box .line {
+      flex-direction: column;
+   }
+   .footer-page .box .line i {
+      margin: 0 10px 12px 0;
+   }
+}
+/*End style footer*/
